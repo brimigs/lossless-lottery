@@ -1,20 +1,10 @@
 use anchor_lang::prelude::*;
-use anchor_spl::associated_token::AssociatedToken;
-use anchor_spl::token_interface::{ Mint, TokenAccount, TokenInterface };
-
-mod buy_ticket;
 
 declare_id!("DuefNx3LzFS4APsodiwEN6t2vf6W9jUGtbjT37HPFjMx");
-
-// automatically generate module using program idl found in ./idls
-declare_program!(lending);
-use lending::accounts::{Bank, User};
-use lending::program::Lending;
 
 #[program]
 pub mod lossless_lottery {
 
-    use buy_ticket::buy_ticket;
 
     use super::*;
 
